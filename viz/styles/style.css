@@ -1,0 +1,270 @@
+:root {
+  --textColor: rgb(200, 200, 200);
+  --spotifyGreen: rgb(30, 160, 60);
+  --grey0: rgb(26, 26, 26);
+  --grey1: rgb(30, 30, 30);
+  --grey2: rgb(44,46,48);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Make the document fill the whole viewport */
+html, body, figure {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* Default font and size */
+body {
+  background: var(--grey1);
+  /* default text */
+  font-family: -apple-system-headline, BlinkMacSystemFont, sans-serifs;
+  color: var(--textColor);
+}
+
+text {
+  fill: var(--textColor);
+  text-anchor: middle;
+}
+
+p {
+  font-size: 1.1vw;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px 7.5%;
+  background-color: var(--grey0);
+  line-height: 1.9;
+}
+
+ h3, h4 {
+  width: 85%;
+  margin: 25px auto;
+  line-height: 1.5;
+  font-size: 1.2vw;
+}
+
+.overview p {
+  font-size: 1.1vw;
+  padding-right: 0;
+}
+
+.overview img {
+  display: inline-block;
+  max-height: 7.5em;
+}
+
+.overview img.to_left {
+  margin-right: 2vw;
+}
+
+.overview img.to_right {
+  margin-left: 2vw;
+}
+
+.overview text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Top Navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #141414;
+  height: 60px;
+}
+
+.topnav ul {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 100px;
+  line-height: 60px;
+}
+
+.topnav h1 {
+  margin: 0;
+  padding-left: 100px;
+}
+
+.topnav ul a {
+  float: right;
+  color: var(--textColor);
+  text-align: center;
+  margin-right: 50px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav ul a:first-child {
+  float: left;
+}
+
+.topnav ul a:hover {
+  color: white;
+}
+
+a {
+  color: #24aeb2;
+}
+
+.title {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+  height: 50px;
+  top: 0;
+  margin: 0;
+  padding: 10px 100px;
+  background-color: var(--grey1);
+  border-width: 1px;
+  border-bottom-style:solid;
+}
+
+/* SVG plots */
+svg {
+  display: block;
+  padding: 0 30px 30px 30px;
+  margin: 70px auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.axis line {
+  stroke: var(--textColor);
+}
+
+.axis path {
+  stroke: var(--textColor);
+}
+
+.focus {
+  cursor: move;
+  pointer-events: all;
+}
+
+.area {
+  fill: var(--grey2);
+  clip-path: url(#clip);
+}
+
+.zoom {
+  fill: none;
+}
+
+.info {
+  pointer-events: none;
+}
+
+.plot-background {
+  fill: none;
+}
+
+.song_circle {
+  fill: var(--spotifyGreen);
+  cursor: auto;
+}
+
+text.info {
+  font-size: 12px;
+}
+
+/* For switch */
+.switch_container {
+  width: 40%;
+  margin: auto;
+}
+.switch {
+  width: 10%;
+  height: 20px;
+  margin: auto;
+}
+
+text#switch_text {
+  margin: auto;
+}
+
+/* For the bubble viz */
+.slider_container {
+  width: 40%;
+  margin: auto;
+}
+
+.slider {
+  width: 85%;
+  height: 15px;
+  border-radius: 5px;
+  background: #ff8fff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 80%;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  appearance: slider-horizontal;
+  width: 15px;
+  height: 15px;
+  border-radius: 80%;
+  cursor: pointer;
+}
+
+#slider_year1 {
+  background: #1ea03c;
+}
+#slider_year1::-webkit-slider-thumb {
+  background: #26563d;
+}
+#slider_year1::-moz-slider-thumb {
+  background: #ffffff;
+}
+
+#slider_year2 {
+  background: #fe5c5c;
+}
+#slider_year2::-webkit-slider-thumb {
+  background: #720000;
+}
+#slider_year2::-moz-slider-thumb {
+  background: #720000;
+}
+
+text#text_year1 {
+  color: #1ea03c;
+}
+
+text#text_year2 {
+  color: #fe5c5c;
+}
+
+circle.year1 {
+  fill: #1ea03c;
+}
+
+circle.year2 {
+  fill: #fe5c5c;
+}
+
+line.y_line {
+  stroke-width: 1;
+  stroke: #000;
+}
+
+.feature_label:hover {
+  fill:white;
+  cursor: default;
+}
